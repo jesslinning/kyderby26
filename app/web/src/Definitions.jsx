@@ -162,40 +162,34 @@ export function DefinitionsTab() {
           <li>Do the same for 3rd and 4th when you are looking at tris and supers.</li>
         </ol>
         <p>
-          The <strong>naive probability</strong> you see is the result of that chain. It is
-          useful for <strong>comparing one ticket to another</strong> under the same rules—not
-          for matching the live betting pool or a full race simulation.
+          That chain produces a <strong>naive probability</strong> per ordered ticket; the Exotics
+          UI turns those into <strong>Rel. Strength</strong> for easier comparison—not for matching
+          the live betting pool or a full race simulation.
         </p>
       </section>
 
       <section className="card def-card" id="def-naive-p">
-        <h2>Naive P</h2>
+        <h2>Rel. Strength (naive-based)</h2>
         <p>
-          Short for <strong>naive probability</strong>: the percentage shown on the{" "}
-          <strong>Exotics</strong> tables for one <em>ordered</em> ticket. It comes from the softmax
-          chain on the <strong>Softmax chains</strong> card above—using the same per-horse composite
-          as the Rankings tab (including optional market blend when live odds are loaded)—pick 1st
-          from the whole field, then 2nd from who is left, then 3rd and 4th the same way—and
-          multiply those steps together to get one number for that exact finishing order.
+          The <strong>Exotics</strong> tables show <strong>Rel. Strength</strong>, not raw naive
+          percentages. Each row’s strength is its share of the <strong>best row on the current
+          list</strong> (top = 100%). Under the hood that ranking still comes from{" "}
+          <strong>naive probability</strong>: the chained-softmax story on the{" "}
+          <strong>Softmax chains</strong> card—same composite as Rankings, pick 1st from the field,
+          then 2nd from who’s left, and so on, and multiply the steps for one exact finish order.
         </p>
         <p>
-          Raw naive probabilities are often <strong>tiny</strong>, so this app adds decimal places
-          when needed so rows are not all “0.00%”. The <strong>Rel.</strong> column gives each ticket
-          as a percentage of the <strong>strongest ticket on the current list</strong> (the top row is
-          always 100%). The narrow bar is the same ratio—useful for spotting gaps between tickets
-          without reading microscopic percentages.
+          In <strong>Straight</strong> view, Rel. Strength compares each ordered ticket to the
+          strongest ordered ticket in the table. In <strong>Box</strong> view, horses are grouped as
+          an unordered set; strength uses the <strong>sum</strong> of naive probabilities for every
+          straight ticket in the list that matches that set, compared to the strongest such set on
+          the list. The narrow bar is the same ratio as the percentage.
         </p>
         <p>
-          Use <strong>Box</strong> on Exotics to group horses as an unordered set and show{" "}
-          <strong>combined</strong> naive probability (sum over straight tickets in the table that
-          share those horses). Switch to <strong>Straight</strong> to see each exact finishing order
-          and its own naive probability—the usual straight-ticket view.
-        </p>
-        <p>
-          Think of it as a <strong>storybook fair comparison</strong>: every ticket is priced with
-          the same recipe so you can see which combinations look stronger or weaker next to each
-          other. It is <strong>not</strong> the track’s parimutuel price, a tote payout, or what
-          you would get from simulating every possible order in the race.
+          Think of it as a <strong>storybook fair comparison</strong>: every ticket or set is judged
+          with the same recipe so you can see which combinations look stronger or weaker next to each
+          other. It is <strong>not</strong> the track’s parimutuel price, a tote payout, or what you
+          would get from simulating every possible order in the race.
         </p>
       </section>
 

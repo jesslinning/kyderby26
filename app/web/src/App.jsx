@@ -24,16 +24,6 @@ function pct(x) {
   return `${(x * 100).toFixed(2)}%`;
 }
 
-/** Adaptive precision so tiny chained probabilities are not all "0.00%". */
-function formatNaiveP(p) {
-  if (p == null || Number.isNaN(p)) return "—";
-  if (p <= 0) return "0%";
-  const pct100 = p * 100;
-  if (pct100 >= 0.01) return `${pct100.toFixed(2)}%`;
-  if (pct100 >= 0.0001) return `${pct100.toFixed(4)}%`;
-  return `${pct100.toFixed(6)}%`;
-}
-
 /** Canonical key for an unordered set of horses (box-style grouping). */
 function boxKeyFromTicket(ticket, cols) {
   const names = cols.map((c) => ticket[c]).filter((x) => x != null && x !== "");
@@ -975,9 +965,9 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
 
       {displayMode === "box" ? (
         <p className="fine-print exotic-view-hint">
-          Horses grouped by set (any finish order). Naive P is the{" "}
-          <strong>sum</strong> of each listed straight ticket that uses that set—only permutations
-          that appear in this table are included.
+          Horses grouped by set (any finish order). <strong>Rel. Strength</strong> compares each set
+          to the strongest set on this list (top = 100%). Only permutations that appear in this table
+          are included when combining probabilities into a set.
         </p>
       ) : null}
 
@@ -989,41 +979,17 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
                 <th scope="col">Horses</th>
                 <th scope="col">
                   <div className="th-ranking th-ranking--exotic">
-                    <span>Naive P (combined)</span>
+                    <span>Rel. Strength</span>
                     <GlossaryTerm
                       variant="icon-only"
-                      name="Combined naive probability"
+                      name="Rel. Strength"
                       defId="naive-p"
-                      summary="Sum of naive probabilities for each straight ticket in this list that matches the same horse set (unordered)."
+                      summary="Share of the strongest entry on this box list (combined naive probability); top row = 100%."
                       onNavigate={onNavigateDefinition}
                     >
-                      Naive P (combined)
+                      Rel. Strength
                     </GlossaryTerm>
                   </div>
-                </th>
-                <th scope="col" title="Finish orders from this table that belong to this set">
-                  Orders
-                </th>
-                <th scope="col">
-                  <div className="th-ranking th-ranking--exotic">
-                    <span>Rel.</span>
-                    <GlossaryTerm
-                      variant="icon-only"
-                      name="Relative naive strength"
-                      defId="naive-p"
-                      summary="Share of the strongest combined naive probability on this box list (top = 100%)."
-                      onNavigate={onNavigateDefinition}
-                    >
-                      Rel.
-                    </GlossaryTerm>
-                  </div>
-                </th>
-                <th
-                  scope="col"
-                  className="exotic-bar-col"
-                  aria-label="Relative strength bar"
-                >
-                  <span className="sr-only">Strength</span>
                 </th>
               </tr>
             </thead>
@@ -1046,19 +1012,18 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
                         </span>
                       ))}
                     </td>
-                    <td className="mono">{formatNaiveP(row.sum)}</td>
-                    <td className="mono muted">{row.count}</td>
-                    <td className="mono exotic-rel-pct">{relPct}</td>
-                    <td className="exotic-bar-cell">
+                    <td className="exotic-box-strength-cell">
                       <div
-                        className="exotic-rel-bar-track"
-                        aria-hidden
+                        className="exotic-bar-row exotic-bar-row--table"
                         title={`${relPct} of top box`}
                       >
-                        <div
-                          className="exotic-rel-bar-fill"
-                          style={{ width: `${rel * 100}%` }}
-                        />
+                        <div className="bar-track">
+                          <div
+                            className="bar-fill"
+                            style={{ width: `${rel * 100}%` }}
+                          />
+                        </div>
+                        <span className="bar-val mono">{relPct}</span>
                       </div>
                     </td>
                   </tr>
@@ -1075,36 +1040,22 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
                 ))}
                 <th scope="col">
                   <div className="th-ranking th-ranking--exotic">
-                    <span>Naive P</span>
+                    <span>Rel. Strength</span>
                     <GlossaryTerm
                       variant="icon-only"
-                      name="Naive P"
+                      name="Rel. Strength"
                       defId="naive-p"
-                      summary="Rough chained probability for this exact finishing order from the same composite as Rankings (optional market blend)—useful for comparing tickets, not for matching live pool odds."
+                      summary="Share of the strongest ticket on this list (naive probability); top row = 100%."
                       onNavigate={onNavigateDefinition}
                     >
-                      Naive P
-                    </GlossaryTerm>
-                  </div>
-                </th>
-                <th scope="col">
-                  <div className="th-ranking th-ranking--exotic">
-                    <span>Rel.</span>
-                    <GlossaryTerm
-                      variant="icon-only"
-                      name="Relative naive strength"
-                      defId="naive-p"
-                      summary="Share of the strongest ticket’s naive probability on this list (top = 100%). Easier to scan than tiny absolute percentages."
-                      onNavigate={onNavigateDefinition}
-                    >
-                      Rel.
+                      Rel. Strength
                     </GlossaryTerm>
                   </div>
                 </th>
                 <th
                   scope="col"
                   className="exotic-bar-col"
-                  aria-label="Relative strength bar"
+                  aria-label="Rel. Strength bar"
                 >
                   <span className="sr-only">Strength</span>
                 </th>
@@ -1123,7 +1074,6 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
                         <HorseLink name={t[c]} />
                       </td>
                     ))}
-                    <td className="mono">{formatNaiveP(p)}</td>
                     <td className="mono exotic-rel-pct">{relPct}</td>
                     <td className="exotic-bar-cell">
                       <div

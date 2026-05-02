@@ -347,6 +347,34 @@ h1 {
   padding-right: 0.35rem;
 }
 
+.exotic-box-strength-cell {
+  vertical-align: middle;
+  min-width: 12rem;
+}
+
+.exotic-bar-row {
+  min-width: 0;
+}
+
+.exotic-bar-row--table {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) auto;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+@media (max-width: 520px) {
+  .exotic-bar-row--table {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .exotic-bar-row--table .bar-val {
+    text-align: left;
+    min-width: unset;
+  }
+}
+
 .exotic-rel-pct {
   white-space: nowrap;
 }
