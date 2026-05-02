@@ -3,7 +3,8 @@
 
 [build]
 builder = "nixpacks"
-buildCommand = "npm ci && npm run build"
+# NPM_CONFIG_CACHE keeps npm's cache out of node_modules (fixes EBUSY rmdir .../node_modules/.cache on some builders).
+buildCommand = "NPM_CONFIG_CACHE=/tmp/npm-cache npm ci && npm run build"
 
 [deploy]
 startCommand = "npm run start"
