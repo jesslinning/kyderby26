@@ -25,8 +25,12 @@ function fmtScore(x) {
 
 const API_ROOT = "/api";
 
-const LIVE_ODDS_API_DOWN =
-  "Live odds API is not reachable (nothing on port 8000). In dev, run `npm run api` in a second terminal, or `npm run dev:all` to start the API and Vite together.";
+function liveOddsUnreachableMessage() {
+  if (import.meta.env.DEV) {
+    return "Live odds API is not reachable (nothing on port 8000). Run `npm run api` in a second terminal, or `npm run dev:all` to start the API and Vite together.";
+  }
+  return "Live odds need the Python API on the same host. In Railway, set the service Root Directory to the repository root (not app/web) and use the root railway.toml so FastAPI serves /api and the Vite build—see comment in /railway.toml.";
+}
 
 /** Match prediction CSV names to KYDerby.com widget names. */
 function normalizeHorseName(s) {
@@ -198,7 +202,7 @@ export default function App() {
       const r = await fetch(url, method === "POST" ? { method: "POST" } : {});
 
       if (!r.ok) {
-        setLiveOddsBanner(LIVE_ODDS_API_DOWN);
+        setLiveOddsBanner(liveOddsUnreachableMessage());
         if (method === "GET") {
           setLiveOdds(null);
         }
@@ -209,7 +213,7 @@ export default function App() {
       try {
         data = await r.json();
       } catch {
-        setLiveOddsBanner(LIVE_ODDS_API_DOWN);
+        setLiveOddsBanner(liveOddsUnreachableMessage());
         if (method === "GET") {
           setLiveOdds(null);
         }
@@ -217,7 +221,7 @@ export default function App() {
       }
 
       if (data?.horses === undefined) {
-        setLiveOddsBanner(LIVE_ODDS_API_DOWN);
+        setLiveOddsBanner(liveOddsUnreachableMessage());
         if (method === "GET") {
           setLiveOdds(null);
         }
@@ -233,8 +237,8 @@ export default function App() {
     } catch (e) {
       setLiveOddsBanner(
         e?.message?.includes("Failed to fetch") || e?.name === "TypeError"
-          ? LIVE_ODDS_API_DOWN
-          : e?.message || LIVE_ODDS_API_DOWN
+          ? liveOddsUnreachableMessage()
+          : e?.message || liveOddsUnreachableMessage()
       );
       if (method === "GET") {
         setLiveOdds(null);

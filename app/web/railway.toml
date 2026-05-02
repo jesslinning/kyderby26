@@ -1,5 +1,7 @@
-# Static-only deploy (no live odds API): Railway Root Directory = `app/web`.
-# For FastAPI + live odds + API routes, deploy from repo root using `/railway.toml`.
+# Static-only: NO /api, NO live odds. (serve dist only)
+#
+# If you need live odds on Railway, do NOT use this as the service root.
+# Use repository root + /railway.toml (parent directory) with blank Root Directory.
 
 [build]
 builder = "nixpacks"

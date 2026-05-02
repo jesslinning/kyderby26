@@ -1,0 +1,11 @@
+{
+  "name": "derby-2026",
+  "private": true,
+  "description": "Root package.json so Railway/Nixpacks installs Node+npm alongside Python (see requirements.txt).",
+  "scripts": {
+    "build": "cd app/web && NPM_CONFIG_CACHE=/tmp/npm-cache npm install --no-audit --no-fund && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

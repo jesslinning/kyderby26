@@ -1,0 +1,3 @@
+# Force both toolchains: custom build uses `pip` and `npm` (see railway.toml).
+[variables]
+NIXPACKS_NODE_VERSION = "20"

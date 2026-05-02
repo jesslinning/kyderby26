@@ -1,9 +1,16 @@
-# Deploy from this repository root so FastAPI can serve `/api/*` and the Vite build.
-# In Railway: set Root Directory to empty (repo root), not `app/web`.
+# LIVE ODDS: deploy from this file (repo root). FastAPI + static dist.
+#
+# In Railway → your service → Settings:
+#   • Root Directory: leave BLANK (or ".")  —  NOT "app/web"
+#   • If Root Directory is "app/web", only `serve` runs and /api/* returns 404
+#     (that is the static-only app/web/railway.toml).
+#
+# After changing root, trigger a new deploy. Set PORT is automatic.
 
 [build]
 builder = "nixpacks"
-buildCommand = "pip install -r app/requirements.txt && cd app/web && NPM_CONFIG_CACHE=/tmp/npm-cache npm install --no-audit --no-fund && npm run build"
+# Requires root package.json + requirements.txt so Nixpacks installs Node (npm) and Python (pip).
+buildCommand = "pip install -r requirements.txt && npm run build"
 
 [deploy]
 startCommand = "PYTHONPATH=. python -m uvicorn app.odds_api:app --host 0.0.0.0 --port ${PORT:-8000}"
