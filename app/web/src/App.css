@@ -357,6 +357,11 @@ h1 {
   display: none;
 }
 
+/* Shown only ≤520px with barlist; desktop table supplies thead */
+.exotic-mobile-thead {
+  display: none;
+}
+
 .exotic-bar-row {
   min-width: 0;
 }
@@ -377,6 +382,25 @@ h1 {
   min-width: 0;
 }
 
+/* Desktop exotics: match thead cell padding (.data th uses 0.45rem 0.65rem; .dense td alone is tighter) */
+.data.dense.exotic-box-table--desktop thead th,
+.data.dense.exotic-straight-table--desktop thead th {
+  padding: 0.5rem 0.65rem;
+}
+
+.data.dense.exotic-box-table--desktop tbody td,
+.data.dense.exotic-straight-table--desktop tbody td {
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.data.dense.exotic-box-table--desktop tbody tr:first-child td,
+.data.dense.exotic-straight-table--desktop tbody tr:first-child td {
+  padding-top: 0.45rem;
+}
+
 @media (max-width: 520px) {
   .exotic-box-strength-cell {
     min-width: 0;
@@ -391,6 +415,79 @@ h1 {
   .exotic-box-barlist,
   .exotic-straight-barlist {
     display: block;
+  }
+
+  .exotic-mobile-thead {
+    display: block;
+    padding: 0.5rem 0.65rem;
+    background: #f0ebe4;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exotic-mobile-thead-row--box {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .exotic-mobile-thead-row--straight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.35rem 0.65rem;
+  }
+
+  .exotic-mobile-th-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.65rem;
+    min-width: 0;
+  }
+
+  .exotic-mobile-th {
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /*
+    Match .data thead th: Rel. Strength lives in .th-ranking inside a div (not <th>),
+    so label text must explicitly use the same header typography as .exotic-mobile-th.
+  */
+  .exotic-mobile-thead .th-ranking--exotic {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    flex-wrap: nowrap;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-family: inherit;
+    line-height: 1.2;
+  }
+
+  .exotic-mobile-thead .th-ranking--exotic > span {
+    font: inherit;
+  }
+
+  .exotic-box-barlist > li:first-child,
+  .exotic-straight-barlist > li:first-child {
+    padding-top: 0.45rem;
+  }
+
+  .exotic-box-barlist > li,
+  .exotic-straight-barlist > li {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+    box-sizing: border-box;
   }
 }
 

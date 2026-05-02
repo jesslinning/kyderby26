@@ -1032,6 +1032,23 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
                 })}
               </tbody>
             </table>
+            <div className="exotic-mobile-thead">
+              <div className="exotic-mobile-thead-row exotic-mobile-thead-row--box">
+                <span className="exotic-mobile-th">Horses</span>
+                <div className="th-ranking th-ranking--exotic">
+                  <span>Rel. Strength</span>
+                  <GlossaryTerm
+                    variant="icon-only"
+                    name="Rel. Strength"
+                    defId="naive-p"
+                    summary="Share of the strongest entry on this box list (combined naive probability); top row = 100%."
+                    onNavigate={onNavigateDefinition}
+                  >
+                    Rel. Strength
+                  </GlossaryTerm>
+                </div>
+              </div>
+            </div>
             <ul
               className="barlist exotic-box-barlist"
               aria-label={`${data.bet_type} box tickets (mobile)`}
@@ -1134,6 +1151,29 @@ function ExoticSection({ data, onNavigateDefinition, embedded }) {
                 })}
               </tbody>
             </table>
+            <div className="exotic-mobile-thead">
+              <div className="exotic-mobile-thead-row exotic-mobile-thead-row--straight">
+                <div className="exotic-mobile-th-group">
+                  {cols.map((c) => (
+                    <span key={c} className="exotic-mobile-th">
+                      {c}
+                    </span>
+                  ))}
+                </div>
+                <div className="th-ranking th-ranking--exotic">
+                  <span>Rel. Strength</span>
+                  <GlossaryTerm
+                    variant="icon-only"
+                    name="Rel. Strength"
+                    defId="naive-p"
+                    summary="Share of the strongest ticket on this list (naive probability); top row = 100%."
+                    onNavigate={onNavigateDefinition}
+                  >
+                    Rel. Strength
+                  </GlossaryTerm>
+                </div>
+              </div>
+            </div>
             <ul
               className="barlist exotic-straight-barlist"
               aria-label={`${data.bet_type} straight tickets (mobile)`}
