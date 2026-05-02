@@ -10,7 +10,12 @@ that already has leaderboard models from Comprehensive, else create; KY_FORCE_NE
 skip that reuse) → Comprehensive only when no models yet on the chosen FI list → barrier wait.
 Phase D: Top 5 models per project by CV score → batch score AI Catalog dataset → data prep/data/predictions
 (with passthrough `horse_name` only, max_explanations=5; skip if output CSV already exists — delete old CSVs when changing batch options).
+Set KY_BATCH_FORCE_RESCORE=1 to always batch-score the current top N even when CSVs exist (live refresh).
 (DataRobot may still queue jobs server-side by account limits.)
+
+Predictions-only (no upload, no autopilot, no FI / Comprehensive): set KY_PREDICTIONS_ONLY=1 and
+KY_PREDICTIONS_PROJECT_IDS to three comma-separated project IDs in order target_FP, target_top3, target_top5
+(copy from a prior Summary block). Does not read combined.csv.
 
 Credentials: modeling/.env. Data: ../data prep/data/processed/combined.csv
 """
@@ -74,6 +79,12 @@ def _batch_passthrough_columns() -> list[str]:
 
 def _batch_max_explanations() -> int:
     return int(os.environ.get("KY_BATCH_MAX_EXPLANATIONS", str(BATCH_MAX_EXPLANATIONS_DEFAULT)))
+
+
+def _batch_force_rescore() -> bool:
+    """If True, Phase D runs batch jobs even when the output CSV path already exists."""
+    v = os.environ.get("KY_BATCH_FORCE_RESCORE", "").strip().lower()
+    return v in ("1", "true", "yes", "y")
 
 
 def _ensure_prediction_explanations_initialized(project_id: str, model_id: str) -> bool:
@@ -207,6 +218,7 @@ def _cv_primary_score(model: dr.Model, metric: str) -> float | None:
 
 
 def _top_models_by_cv(project_id: str, limit: int) -> list[dr.Model]:
+    """Rank models by live CV metric; re-fetch top candidates so order matches current leaderboard."""
     project = dr.Project.get(project_id)
     project.refresh()
     metric = project.metric
@@ -225,7 +237,21 @@ def _top_models_by_cv(project_id: str, limit: int) -> list[dr.Model]:
     scored.sort(
         key=lambda x: (-x[0], x[1]) if not is_ascending else (x[0], x[1])
     )
-    out_models = [t[2] for t in scored[:limit]]
+    if not scored:
+        return []
+
+    # Re-fetch a slice of leaders via Model.get + re-sort so ranks match UI after manual edits.
+    refresh_n = min(len(scored), max(limit * 5, 25))
+    fresh: list[tuple[float, str, dr.Model]] = []
+    for _, mid, _ in scored[:refresh_n]:
+        m = dr.Model.get(project_id, mid)
+        score = _cv_primary_score(m, metric)
+        if score is None:
+            continue
+        fresh.append((score, m.id, m))
+    fresh.sort(key=lambda x: (-x[0], x[1]) if not is_ascending else (x[0], x[1]))
+    out_models = [t[2] for t in fresh[:limit]]
+
     if len(out_models) < limit:
         logger.warning(
             "  Only %s model(s) with CV/backtest/validation scores for metric %r (wanted %s)",
@@ -246,6 +272,7 @@ def _run_batch_predictions_for_project(
     out_dir = _predictions_output_dir()
     passthrough = _batch_passthrough_columns()
     max_pe = _batch_max_explanations()
+    force_rescore = _batch_force_rescore()
 
     for m in models:
         full = dr.Model.get(project_id, m.id)
@@ -255,13 +282,20 @@ def _run_batch_predictions_for_project(
 
         # Same path as older runs; if batch columns/explanations changed, remove stale CSVs or we skip forever.
         if out_path.is_file():
+            if not force_rescore:
+                logger.info(
+                    "  Skip batch scoring (already exists) target=%r model=%s → %s",
+                    target,
+                    full.id,
+                    out_path,
+                )
+                continue
             logger.info(
-                "  Skip batch scoring (already exists) target=%r model=%s → %s",
+                "  Replacing existing predictions (KY_BATCH_FORCE_RESCORE) target=%r model=%s → %s",
                 target,
                 full.id,
                 out_path,
             )
-            continue
 
         logger.info(
             "  Batch scoring target=%r model=%s (%s) → %s",
@@ -561,8 +595,91 @@ def _kickoff_comprehensive_job(job: tuple[str, str, str]) -> str | None:
     return pid if _kickoff_comprehensive(pid, fl_id, target) else None
 
 
+def _predictions_only_mode() -> bool:
+    v = os.environ.get("KY_PREDICTIONS_ONLY", "").strip().lower()
+    return v in ("1", "true", "yes", "y")
+
+
+def _predictions_only_works() -> list[dict[str, Any]]:
+    """Build Phase D work list from env; does not upload data or run modeling."""
+    raw = os.environ.get("KY_PREDICTIONS_PROJECT_IDS", "").strip()
+    if not raw:
+        raise SystemExit(
+            "KY_PREDICTIONS_ONLY requires KY_PREDICTIONS_PROJECT_IDS: three comma-separated "
+            f"project IDs in order {TARGETS} (see a prior run Summary)."
+        )
+    ids = [x.strip() for x in raw.split(",") if x.strip()]
+    if len(ids) != len(TARGETS):
+        raise SystemExit(
+            f"KY_PREDICTIONS_PROJECT_IDS must contain exactly {len(TARGETS)} IDs "
+            f"for {TARGETS} (got {len(ids)} segment(s))."
+        )
+    works: list[dict[str, Any]] = []
+    for target, project_id in zip(TARGETS, ids, strict=True):
+        dr.Project.get(project_id)
+        works.append({"target": target, "project_id": project_id})
+    return works
+
+
+def _phase_d_batch_predictions(works: list[dict[str, Any]]) -> None:
+    intake_pred_id = _predictions_intake_dataset_id()
+    logger.info("\n=== Phase D: batch predictions (top %s per project) ===", TOP_MODELS_PER_PROJECT)
+    logger.info("  Intake AI Catalog dataset id=%s", intake_pred_id)
+    logger.info(
+        "  Passthrough columns=%s max_explanations=%s force_rescore=%s "
+        "(env KY_BATCH_PASSTHROUGH_COLUMNS, KY_BATCH_MAX_EXPLANATIONS, KY_BATCH_FORCE_RESCORE)",
+        _batch_passthrough_columns(),
+        _batch_max_explanations(),
+        _batch_force_rescore(),
+    )
+
+    for w in works:
+        top = _top_models_by_cv(w["project_id"], TOP_MODELS_PER_PROJECT)
+        if not top:
+            logger.warning("  No scorable models for target=%r project=%s", w["target"], w["project_id"])
+            continue
+        logger.info(
+            "  target=%r project=%s top_model_ids=%s",
+            w["target"],
+            w["project_id"],
+            [m.id for m in top],
+        )
+        _run_batch_predictions_for_project(w["project_id"], w["target"], intake_pred_id, top)
+
+
+def _log_pipeline_summary(
+    works: list[dict[str, Any]],
+    *,
+    use_case_id: str | None,
+    dataset_id: str | None,
+    predictions_only: bool,
+) -> None:
+    logger.info("\n=== Summary ===")
+    if predictions_only:
+        logger.info("  mode=predictions-only (Phases A–C skipped)")
+    if use_case_id is not None:
+        logger.info("use_case_id=%s", use_case_id)
+    if dataset_id is not None:
+        logger.info("dataset_id=%s", dataset_id)
+    for w in works:
+        n = len(dr.Model.list(w["project_id"]))
+        logger.info("target=%r project_id=%s models=%s", w["target"], w["project_id"], n)
+
+
 def main() -> None:
     _configure_logging()
+    token, endpoint = _load_env()
+    dr.Client(token=token, endpoint=endpoint)
+
+    if _predictions_only_mode():
+        works = _predictions_only_works()
+        logger.info(
+            "KY_PREDICTIONS_ONLY: skipping dataset upload, project setup, and Phases B–C (modeling)."
+        )
+        _phase_d_batch_predictions(works)
+        _log_pipeline_summary(works, use_case_id=None, dataset_id=None, predictions_only=True)
+        return
+
     csv_path = _combined_csv_path()
     if not csv_path.is_file():
         raise SystemExit(f"Data file not found: {csv_path}")
@@ -571,9 +688,6 @@ def main() -> None:
         "Predictor featurelist excludes Informative columns: %s",
         PREDICTOR_EXCLUSIONS,
     )
-
-    token, endpoint = _load_env()
-    dr.Client(token=token, endpoint=endpoint)
 
     logger.info("Use case...")
     use_case_id = get_or_create_use_case(
@@ -698,36 +812,13 @@ def main() -> None:
         logger.info("\n=== Phase C3: wait for Comprehensive autopilots (parallel) ===")
         _wait_comprehensive_autopilot(pending_comprehensive)
 
-    intake_pred_id = _predictions_intake_dataset_id()
-    logger.info("\n=== Phase D: batch predictions (top %s per project) ===", TOP_MODELS_PER_PROJECT)
-    logger.info("  Intake AI Catalog dataset id=%s", intake_pred_id)
-    logger.info(
-        "  Passthrough columns=%s max_explanations=%s (env KY_BATCH_PASSTHROUGH_COLUMNS, KY_BATCH_MAX_EXPLANATIONS)",
-        _batch_passthrough_columns(),
-        _batch_max_explanations(),
+    _phase_d_batch_predictions(works)
+    _log_pipeline_summary(
+        works,
+        use_case_id=use_case_id,
+        dataset_id=dataset_id,
+        predictions_only=False,
     )
-
-    for w in works:
-        top = _top_models_by_cv(w["project_id"], TOP_MODELS_PER_PROJECT)
-        if not top:
-            logger.warning("  No scorable models for target=%r project=%s", w["target"], w["project_id"])
-            continue
-        logger.info(
-            "  target=%r project=%s top_model_ids=%s",
-            w["target"],
-            w["project_id"],
-            [m.id for m in top],
-        )
-        _run_batch_predictions_for_project(
-            w["project_id"], w["target"], intake_pred_id, top
-        )
-
-    logger.info("\n=== Summary ===")
-    logger.info(f"use_case_id={use_case_id}")
-    logger.info(f"dataset_id={dataset_id}")
-    for w in works:
-        n = len(dr.Model.list(w["project_id"]))
-        logger.info(f"target={w['target']!r} project_id={w['project_id']} models={n}")
 
 
 if __name__ == "__main__":

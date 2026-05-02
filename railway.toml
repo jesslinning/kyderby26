@@ -1,0 +1,9 @@
+# Deploy from this repository root so FastAPI can serve `/api/*` and the Vite build.
+# In Railway: set Root Directory to empty (repo root), not `app/web`.
+
+[build]
+builder = "nixpacks"
+buildCommand = "pip install -r app/requirements.txt && cd app/web && NPM_CONFIG_CACHE=/tmp/npm-cache npm install --no-audit --no-fund && npm run build"
+
+[deploy]
+startCommand = "PYTHONPATH=. python -m uvicorn app.odds_api:app --host 0.0.0.0 --port ${PORT:-8000}"

@@ -131,6 +131,78 @@ h1 {
   margin-left: 0.25rem;
 }
 
+.live-odds-bar {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  max-width: 52ch;
+}
+
+.live-odds-bar__status {
+  margin: 0 0 0.5rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.live-odds-bar__warn {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  color: var(--derby-red);
+}
+
+.live-odds-bar__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.live-odds-bar__slider {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: min(100%, 220px);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.live-odds-bar__slider-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.live-odds-bar__slider input[type="range"] {
+  width: 100%;
+  max-width: 220px;
+  accent-color: var(--gold);
+}
+
+.live-odds-bar__refresh {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #fffefb, var(--bg));
+  color: var(--text);
+  cursor: pointer;
+}
+
+.live-odds-bar__refresh:hover:not(:disabled) {
+  border-color: var(--gold);
+}
+
+.live-odds-bar__refresh:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 .glossary-mobile-hint {
   margin: 1rem 0 0;
   padding: 0.65rem 0.85rem;
@@ -411,6 +483,20 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.bar-name-wrap {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  min-width: 0;
+}
+
+.bar-odds {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
 }
 
 .bar-track {
@@ -782,6 +868,10 @@ h1 {
   justify-content: flex-start;
   gap: 0.15rem;
   flex-wrap: nowrap;
+}
+
+.th-ranking--exotic {
+  align-items: center;
 }
 
 .th-ranking__sort {

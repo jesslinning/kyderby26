@@ -1,10 +1,8 @@
-# Used when this service's Root Directory is set to `app/web` in Railway.
-# See: https://docs.railway.com/deployments/monorepo
+# Static-only deploy (no live odds API): Railway Root Directory = `app/web`.
+# For FastAPI + live odds + API routes, deploy from repo root using `/railway.toml`.
 
 [build]
 builder = "nixpacks"
-# Avoid `npm ci` here: it deletes/recreates node_modules and hits EBUSY on .../node_modules/.cache
-# with Nixpacks/Docker overlay FS. `npm install` still respects package-lock.json (npm 7+).
 buildCommand = "NPM_CONFIG_CACHE=/tmp/npm-cache npm install --no-audit --no-fund && npm run build"
 
 [deploy]

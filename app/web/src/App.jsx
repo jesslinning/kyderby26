@@ -23,6 +23,73 @@ function fmtScore(x) {
   return Number(x).toFixed(4);
 }
 
+const API_ROOT = "/api";
+
+const LIVE_ODDS_API_DOWN =
+  "Live odds API is not reachable (nothing on port 8000). In dev, run `npm run api` in a second terminal, or `npm run dev:all` to start the API and Vite together.";
+
+/** Match prediction CSV names to KYDerby.com widget names. */
+function normalizeHorseName(s) {
+  return String(s ?? "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .join(" ")
+    .toUpperCase();
+}
+
+function buildOddsLookup(apiHorses) {
+  const m = new Map();
+  for (const h of apiHorses ?? []) {
+    const key = h.horse_name_normalized ?? normalizeHorseName(h.horse_name);
+    m.set(key, h);
+  }
+  return m;
+}
+
+/** @param {string | null | undefined} iso */
+function formatLiveOddsTimestamp(iso, tick) {
+  void tick;
+  if (!iso) return { primary: "Live odds not loaded yet.", detail: "" };
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return { primary: "Live odds time unavailable.", detail: "" };
+  const abs = d.toLocaleString(undefined, {
+    dateStyle: "medium",
+    timeStyle: "medium",
+  });
+  const sec = Math.max(0, (Date.now() - d.getTime()) / 1000);
+  let rel;
+  if (sec < 45) rel = "just now";
+  else if (sec < 3600) rel = `${Math.floor(sec / 60)}m ago`;
+  else if (sec < 86400) rel = `${Math.floor(sec / 3600)}h ago`;
+  else rel = `${Math.floor(sec / 86400)}d ago`;
+  return {
+    primary: `Live odds as of ${abs} (${rel}).`,
+    detail: `UTC equivalent: ${iso}`,
+  };
+}
+
+function enrichHorses(horses, oddsLookup, marketAlpha) {
+  const a = Number(marketAlpha);
+  const alpha = Number.isFinite(a) ? Math.min(0.5, Math.max(0, a)) : 0.1;
+  return (horses ?? []).map((h) => {
+    const o = oddsLookup?.get(normalizeHorseName(h.horse_name));
+    const ms = o?.market_strength;
+    const cs = h.composite_score ?? 0;
+    const hasMs = ms != null && Number.isFinite(Number(ms));
+    const compositeWithMarket = hasMs
+      ? (1 - alpha) * cs + alpha * Number(ms)
+      : cs;
+    return {
+      ...h,
+      live_odds_str: o?.odds_str ?? null,
+      live_implied_probability: o?.implied_probability ?? null,
+      market_strength_live: hasMs ? Number(ms) : null,
+      composite_with_market: compositeWithMarket,
+    };
+  });
+}
+
 /** Sortable prediction table header: label + sort control + glossary icon (icon-only). */
 function PredictionSortHeader({ sortKey, label, predictionSort, onSort, glossary }) {
   const active = predictionSort.key === sortKey;
@@ -71,6 +138,11 @@ export default function App() {
     key: "composite_score",
     dir: "desc",
   });
+  const [liveOdds, setLiveOdds] = useState(null);
+  const [liveOddsBanner, setLiveOddsBanner] = useState(null);
+  const [liveOddsRefreshing, setLiveOddsRefreshing] = useState(false);
+  const [marketAlpha, setMarketAlpha] = useState(0.1);
+  const [clockTick, setClockTick] = useState(0);
 
   const goToDefinition = useCallback((defId) => {
     setTab("definitions");
@@ -117,12 +189,107 @@ export default function App() {
     };
   }, []);
 
+  const loadLiveOdds = useCallback(async (method = "GET") => {
+    try {
+      const url =
+        method === "POST"
+          ? `${API_ROOT}/live-odds/refresh`
+          : `${API_ROOT}/live-odds`;
+      const r = await fetch(url, method === "POST" ? { method: "POST" } : {});
+
+      if (!r.ok) {
+        setLiveOddsBanner(LIVE_ODDS_API_DOWN);
+        if (method === "GET") {
+          setLiveOdds(null);
+        }
+        return;
+      }
+
+      let data = {};
+      try {
+        data = await r.json();
+      } catch {
+        setLiveOddsBanner(LIVE_ODDS_API_DOWN);
+        if (method === "GET") {
+          setLiveOdds(null);
+        }
+        return;
+      }
+
+      if (data?.horses === undefined) {
+        setLiveOddsBanner(LIVE_ODDS_API_DOWN);
+        if (method === "GET") {
+          setLiveOdds(null);
+        }
+        return;
+      }
+
+      setLiveOdds(data);
+      setLiveOddsBanner(
+        data?.error && (!data?.horses || data.horses.length === 0)
+          ? String(data.error)
+          : null
+      );
+    } catch (e) {
+      setLiveOddsBanner(
+        e?.message?.includes("Failed to fetch") || e?.name === "TypeError"
+          ? LIVE_ODDS_API_DOWN
+          : e?.message || LIVE_ODDS_API_DOWN
+      );
+      if (method === "GET") {
+        setLiveOdds(null);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      await loadLiveOdds("GET");
+    })();
+    const id = window.setInterval(() => {
+      if (!cancelled) loadLiveOdds("GET");
+    }, 90_000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(id);
+    };
+  }, [loadLiveOdds]);
+
+  useEffect(() => {
+    const id = window.setInterval(() => setClockTick((t) => t + 1), 15_000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  const refreshLiveOddsManual = useCallback(async () => {
+    setLiveOddsRefreshing(true);
+    try {
+      await loadLiveOdds("POST");
+    } finally {
+      setLiveOddsRefreshing(false);
+    }
+  }, [loadLiveOdds]);
+
+  const oddsLookup = useMemo(
+    () => buildOddsLookup(liveOdds?.horses),
+    [liveOdds?.horses]
+  );
+
+  const horsesEnriched = useMemo(
+    () => enrichHorses(combined?.horses, oddsLookup, marketAlpha),
+    [combined?.horses, oddsLookup, marketAlpha]
+  );
+
   const horsesSorted = useMemo(() => {
-    if (!combined?.horses) return [];
-    return [...combined.horses].sort(
-      (a, b) => (b.composite_score ?? 0) - (a.composite_score ?? 0)
+    if (!horsesEnriched.length) return [];
+    const scoreKey = (h) =>
+      h.market_strength_live != null ? h.composite_with_market : h.composite_score;
+    return [...horsesEnriched].sort(
+      (a, b) => (scoreKey(b) ?? 0) - (scoreKey(a) ?? 0)
     );
-  }, [combined]);
+  }, [horsesEnriched]);
+
+  const ts = formatLiveOddsTimestamp(liveOdds?.fetched_at, clockTick);
 
   const togglePredictionSort = useCallback((key) => {
     setPredictionSort((prev) => {
@@ -137,7 +304,7 @@ export default function App() {
   }, []);
 
   const predictionRows = useMemo(() => {
-    const rows = [...(combined?.horses ?? [])];
+    const rows = [...horsesEnriched];
     const { key, dir } = predictionSort;
     const mul = dir === "asc" ? 1 : -1;
 
@@ -164,11 +331,16 @@ export default function App() {
       return mul * (na - nb);
     });
     return rows;
-  }, [combined?.horses, predictionSort]);
+  }, [horsesEnriched, predictionSort]);
 
   const maxComposite = useMemo(() => {
     if (!horsesSorted.length) return 1;
-    return Math.max(...horsesSorted.map((h) => h.composite_score ?? 0), 1e-9);
+    const scores = horsesSorted.map((h) =>
+      h.market_strength_live != null
+        ? h.composite_with_market
+        : h.composite_score ?? 0
+    );
+    return Math.max(...scores, 1e-9);
   }, [horsesSorted]);
 
   if (error) {
@@ -217,6 +389,48 @@ export default function App() {
           <span className="pill">
             FP strength weight <strong>{w.fp_strength ?? "—"}</strong>
           </span>
+        </div>
+        <div className="live-odds-bar">
+          <p className="live-odds-bar__status" title={ts.detail}>
+            {ts.primary}
+          </p>
+          {liveOddsBanner ? (
+            <p className="live-odds-bar__warn" role="status">
+              {liveOddsBanner}
+            </p>
+          ) : null}
+          <div className="live-odds-bar__controls">
+            <label className="live-odds-bar__slider">
+              <span className="live-odds-bar__slider-label">
+                <GlossaryTerm
+                  name="Market blend"
+                  defId="market-blend"
+                  summary="How much the pool-implied market strength is mixed into the model composite when live odds are available."
+                  onNavigate={goToDefinition}
+                >
+                  Market blend (α)
+                </GlossaryTerm>{" "}
+                <strong className="mono">{marketAlpha.toFixed(2)}</strong>
+              </span>
+              <input
+                type="range"
+                min={0}
+                max={0.35}
+                step={0.01}
+                value={marketAlpha}
+                onChange={(e) => setMarketAlpha(Number(e.target.value))}
+                aria-label="Market blend alpha weight"
+              />
+            </label>
+            <button
+              type="button"
+              className="live-odds-bar__refresh"
+              onClick={refreshLiveOddsManual}
+              disabled={liveOddsRefreshing}
+            >
+              {liveOddsRefreshing ? "Refreshing…" : "Refresh odds"}
+            </button>
+          </div>
         </div>
         <p className="glossary-mobile-hint" role="note">
           <strong>Definitions:</strong> tap the circular{" "}
@@ -280,23 +494,37 @@ export default function App() {
             <span className="h2-suffix">(top field)</span>
           </h2>
           <p className="muted">
-            Bar length is proportional to composite score (max in field = 100%).
+            Bar length uses{" "}
+            {horsesEnriched.some((x) => x.market_strength_live != null)
+              ? "composite with market when odds match (same scale as Rankings tab)."
+              : "model composite score (max in field = 100%)."}
           </p>
           <ul className="barlist">
-            {horsesSorted.slice(0, 16).map((h) => (
-              <li key={h.horse_name}>
-                <HorseLink name={h.horse_name} className="bar-name" />
-                <div className="bar-track">
-                  <div
-                    className="bar-fill"
-                    style={{
-                      width: `${((h.composite_score ?? 0) / maxComposite) * 100}%`,
-                    }}
-                  />
-                </div>
-                <span className="bar-val mono">{fmtScore(h.composite_score)}</span>
-              </li>
-            ))}
+            {horsesSorted.slice(0, 16).map((h) => {
+              const barScore =
+                h.market_strength_live != null
+                  ? h.composite_with_market
+                  : h.composite_score ?? 0;
+              return (
+                <li key={h.horse_name}>
+                  <span className="bar-name-wrap">
+                    <HorseLink name={h.horse_name} className="bar-name" />
+                    {h.live_odds_str ? (
+                      <span className="bar-odds mono">{h.live_odds_str}</span>
+                    ) : null}
+                  </span>
+                  <div className="bar-track">
+                    <div
+                      className="bar-fill"
+                      style={{
+                        width: `${(barScore / maxComposite) * 100}%`,
+                      }}
+                    />
+                  </div>
+                  <span className="bar-val mono">{fmtScore(barScore)}</span>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )}
@@ -343,6 +571,57 @@ export default function App() {
                         onNavigate={goToDefinition}
                       >
                         Composite
+                      </GlossaryTerm>
+                    }
+                  />
+                  <PredictionSortHeader
+                    sortKey="composite_with_market"
+                    label="Composite+market"
+                    predictionSort={predictionSort}
+                    onSort={togglePredictionSort}
+                    glossary={
+                      <GlossaryTerm
+                        variant="icon-only"
+                        name="Composite plus market"
+                        defId="composite-with-market"
+                        summary="Model composite blended with pool-implied market strength when KentuckyDerby.com odds match this horse; otherwise equals Composite."
+                        onNavigate={goToDefinition}
+                      >
+                        Composite+market
+                      </GlossaryTerm>
+                    }
+                  />
+                  <PredictionSortHeader
+                    sortKey="live_implied_probability"
+                    label="Live odds"
+                    predictionSort={predictionSort}
+                    onSort={togglePredictionSort}
+                    glossary={
+                      <GlossaryTerm
+                        variant="icon-only"
+                        name="Live odds"
+                        defId="live-odds-col"
+                        summary="Fractional pool-style odds from the official live odds page (matched by horse name). Sort uses implied win probability."
+                        onNavigate={goToDefinition}
+                      >
+                        Live odds
+                      </GlossaryTerm>
+                    }
+                  />
+                  <PredictionSortHeader
+                    sortKey="market_strength_live"
+                    label="Mkt str."
+                    predictionSort={predictionSort}
+                    onSort={togglePredictionSort}
+                    glossary={
+                      <GlossaryTerm
+                        variant="icon-only"
+                        name="Market strength"
+                        defId="market-strength-live"
+                        summary="0–1 rank from live implied probability among entries on the odds page—favorites score higher."
+                        onNavigate={goToDefinition}
+                      >
+                        Mkt str.
                       </GlossaryTerm>
                     }
                   />
@@ -423,6 +702,11 @@ export default function App() {
                       <HorseLink name={h.horse_name} />
                     </td>
                     <td className="mono">{fmtScore(h.composite_score)}</td>
+                    <td className="mono">{fmtScore(h.composite_with_market)}</td>
+                    <td className="mono">
+                      {h.live_odds_str ?? "—"}
+                    </td>
+                    <td className="mono">{fmtScore(h.market_strength_live)}</td>
                     <td className="mono">{fmtScore(h.ensemble_top3)}</td>
                     <td className="mono">{fmtScore(h.ensemble_top5)}</td>
                     <td className="mono">{fmtScore(h.fp_strength)}</td>
@@ -435,9 +719,15 @@ export default function App() {
         </section>
       )}
 
-      {tab === "exacta" && <ExoticSection data={scenarios.exacta} />}
-      {tab === "trifecta" && <ExoticSection data={scenarios.trifecta} />}
-      {tab === "superfecta" && <ExoticSection data={scenarios.superfecta} />}
+      {tab === "exacta" && (
+        <ExoticSection data={scenarios.exacta} onNavigateDefinition={goToDefinition} />
+      )}
+      {tab === "trifecta" && (
+        <ExoticSection data={scenarios.trifecta} onNavigateDefinition={goToDefinition} />
+      )}
+      {tab === "superfecta" && (
+        <ExoticSection data={scenarios.superfecta} onNavigateDefinition={goToDefinition} />
+      )}
 
       {tab === "definitions" && <DefinitionsTab />}
 
@@ -474,7 +764,7 @@ export default function App() {
   );
 }
 
-function ExoticSection({ data }) {
+function ExoticSection({ data, onNavigateDefinition }) {
   if (!data?.tickets?.length) {
     return (
       <section className="card">
@@ -501,7 +791,20 @@ function ExoticSection({ data }) {
               {cols.map((c) => (
                 <th key={c}>{c}</th>
               ))}
-              <th>Naive P</th>
+              <th scope="col">
+                <div className="th-ranking th-ranking--exotic">
+                  <span>Naive P</span>
+                  <GlossaryTerm
+                    variant="icon-only"
+                    name="Naive P"
+                    defId="naive-p"
+                    summary="Rough chained probability for this exact finishing order from model scores—useful for comparing tickets, not for matching live pool odds."
+                    onNavigate={onNavigateDefinition}
+                  >
+                    Naive P
+                  </GlossaryTerm>
+                </div>
+              </th>
             </tr>
           </thead>
           <tbody>

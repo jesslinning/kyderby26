@@ -77,6 +77,44 @@ export function DefinitionsTab() {
         </p>
       </section>
 
+      <section className="card def-card" id="def-market-blend">
+        <h2>Market blend (α)</h2>
+        <p>
+          When live pool odds are matched to a horse, you can mix a little of the{" "}
+          <strong>market strength</strong> into the model composite. Alpha is the weight on
+          that market term; <strong>(1 − α)</strong> stays on the original composite. If no
+          odds match, the score stays model-only.
+        </p>
+      </section>
+
+      <section className="card def-card" id="def-composite-with-market">
+        <h2>Composite plus market</h2>
+        <p>
+          <strong>(1 − α) × composite</strong> plus <strong>α × market strength</strong> when
+          fractional odds from the official live odds page line up with this horse’s name.
+          It is still a <strong>rough ranking</strong>, not a calibrated win probability—now
+          with a nod to what the betting pool is doing.
+        </p>
+      </section>
+
+      <section className="card def-card" id="def-live-odds-col">
+        <h2>Live odds</h2>
+        <p>
+          Pool-style <strong>fractional odds</strong> (for example 5/1) pulled from the
+          Kentucky Derby live odds widget and matched by horse name. Sorting this column uses
+          the <strong>implied win probability</strong> (for a/b odds, b ÷ (a + b)).
+        </p>
+      </section>
+
+      <section className="card def-card" id="def-market-strength-live">
+        <h2>Market strength (live)</h2>
+        <p>
+          A 0–1 score from <strong>where the horse sits in the live implied-probability
+          ranking</strong> among entries on the odds page—short-priced horses score higher.
+          It is defined only when that page lists the horse.
+        </p>
+      </section>
+
       <section className="card def-card" id="def-softmax">
         <h2>Softmax</h2>
         <p>
@@ -112,6 +150,23 @@ export function DefinitionsTab() {
         </p>
       </section>
 
+      <section className="card def-card" id="def-naive-p">
+        <h2>Naive P</h2>
+        <p>
+          Short for <strong>naive probability</strong>: the percentage shown on exacta, trifecta,
+          and superfecta tables for one <em>ordered</em> ticket. It comes from the softmax chain
+          on the <strong>Softmax chains</strong> card above—pick 1st from the whole field, then
+          2nd from who is left, then 3rd and 4th the same way—and multiply those steps together
+          to get one number for that exact finishing order.
+        </p>
+        <p>
+          Think of it as a <strong>storybook fair comparison</strong>: every ticket is priced with
+          the same recipe so you can see which combinations look stronger or weaker next to each
+          other. It is <strong>not</strong> the track’s parimutuel price, a tote payout, or what
+          you would get from simulating every possible order in the race.
+        </p>
+      </section>
+
       <section className="card def-card def-card--compact">
         <h2>More terms (short glossary)</h2>
         <dl className="glossary">
@@ -128,10 +183,6 @@ export function DefinitionsTab() {
           <dd>Only ordered bets built from the strongest handful of horses (by that screen’s
             score) are listed, to keep the list manageable. Anyone outside that group is left
             out even if they could still hit.</dd>
-
-          <dt>Naive probability</dt>
-          <dd>The chained storybook chance for one ordered ticket; it is not the full picture of
-            every possible finishing order in the race.</dd>
 
           <dt>Multiple models</dt>
           <dd>Several automated predictions are averaged or blended for each horse—similar to
