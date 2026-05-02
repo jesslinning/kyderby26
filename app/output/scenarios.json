@@ -1,0 +1,3411 @@
+{
+  "blend_weights": {
+    "ensemble_top3": 0.5,
+    "ensemble_top5": 0.4,
+    "fp_strength": 0.1
+  },
+  "rankings": {
+    "composite": {
+      "preset": "composite",
+      "ranking": [
+        {
+          "rank": 1,
+          "horse_name": "COMMANDMENT",
+          "score": 0.40570661936895647,
+          "preset": "composite"
+        },
+        {
+          "rank": 2,
+          "horse_name": "SO HAPPY",
+          "score": 0.3821518648858261,
+          "preset": "composite"
+        },
+        {
+          "rank": 3,
+          "horse_name": "THE PUMA",
+          "score": 0.3391538572316522,
+          "preset": "composite"
+        },
+        {
+          "rank": 4,
+          "horse_name": "EMERGING MARKET",
+          "score": 0.3217181022065217,
+          "preset": "composite"
+        },
+        {
+          "rank": 5,
+          "horse_name": "CHIEF WALLABEE",
+          "score": 0.29738208009234784,
+          "preset": "composite"
+        },
+        {
+          "rank": 6,
+          "horse_name": "RENEGADE",
+          "score": 0.293582954918,
+          "preset": "composite"
+        },
+        {
+          "rank": 7,
+          "horse_name": "GOLDEN TEMPO",
+          "score": 0.2917289979768696,
+          "preset": "composite"
+        },
+        {
+          "rank": 8,
+          "horse_name": "WONDER DEAN",
+          "score": 0.2771506172391304,
+          "preset": "composite"
+        },
+        {
+          "rank": 9,
+          "horse_name": "POTENTE",
+          "score": 0.2671680728142609,
+          "preset": "composite"
+        },
+        {
+          "rank": 10,
+          "horse_name": "DANON BOURBON",
+          "score": 0.25946098584269567,
+          "preset": "composite"
+        },
+        {
+          "rank": 11,
+          "horse_name": "RIGHT TO PARTY",
+          "score": 0.25583588252139133,
+          "preset": "composite"
+        },
+        {
+          "rank": 12,
+          "horse_name": "FURTHER ADO",
+          "score": 0.24879129626756522,
+          "preset": "composite"
+        },
+        {
+          "rank": 13,
+          "horse_name": "SIX SPEED",
+          "score": 0.23740279845808696,
+          "preset": "composite"
+        },
+        {
+          "rank": 14,
+          "horse_name": "GREAT WHITE",
+          "score": 0.22587891373,
+          "preset": "composite"
+        },
+        {
+          "rank": 15,
+          "horse_name": "ALBUS",
+          "score": 0.2143831427333044,
+          "preset": "composite"
+        },
+        {
+          "rank": 16,
+          "horse_name": "INCREDIBOLT",
+          "score": 0.2003832632727826,
+          "preset": "composite"
+        },
+        {
+          "rank": 17,
+          "horse_name": "CORONA DE ORO",
+          "score": 0.1991717307792174,
+          "preset": "composite"
+        },
+        {
+          "rank": 18,
+          "horse_name": "PAVLOVIAN",
+          "score": 0.1870697916030435,
+          "preset": "composite"
+        },
+        {
+          "rank": 19,
+          "horse_name": "ROBUSTA",
+          "score": 0.16579744430417392,
+          "preset": "composite"
+        },
+        {
+          "rank": 20,
+          "horse_name": "LITMUS TEST",
+          "score": 0.1657771029266087,
+          "preset": "composite"
+        },
+        {
+          "rank": 21,
+          "horse_name": "FULLEFFORT",
+          "score": 0.15432124907191305,
+          "preset": "composite"
+        },
+        {
+          "rank": 22,
+          "horse_name": "SILENT TACTIC",
+          "score": 0.15291535691347827,
+          "preset": "composite"
+        },
+        {
+          "rank": 23,
+          "horse_name": "INTREPIDO",
+          "score": 0.12880984020443478,
+          "preset": "composite"
+        },
+        {
+          "rank": 24,
+          "horse_name": "OCELLI",
+          "score": 0.10946877804573914,
+          "preset": "composite"
+        }
+      ]
+    },
+    "ensemble_top3": {
+      "preset": "ensemble_top3",
+      "ranking": [
+        {
+          "rank": 1,
+          "horse_name": "EMERGING MARKET",
+          "score": 0.36109448081999995,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 2,
+          "horse_name": "SO HAPPY",
+          "score": 0.34544979898,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 3,
+          "horse_name": "THE PUMA",
+          "score": 0.32922734224,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 4,
+          "horse_name": "COMMANDMENT",
+          "score": 0.23940557954,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 5,
+          "horse_name": "WONDER DEAN",
+          "score": 0.2019627006,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 6,
+          "horse_name": "DANON BOURBON",
+          "score": 0.1934759089,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 7,
+          "horse_name": "ALBUS",
+          "score": 0.18928585926000002,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 8,
+          "horse_name": "GREAT WHITE",
+          "score": 0.18874440473999998,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 9,
+          "horse_name": "INCREDIBOLT",
+          "score": 0.17982668870000001,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 10,
+          "horse_name": "RIGHT TO PARTY",
+          "score": 0.1714933548,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 11,
+          "horse_name": "RENEGADE",
+          "score": 0.1698259295,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 12,
+          "horse_name": "GOLDEN TEMPO",
+          "score": 0.16889162988,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 13,
+          "horse_name": "CORONA DE ORO",
+          "score": 0.14688679046,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 14,
+          "horse_name": "FURTHER ADO",
+          "score": 0.14574281726,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 15,
+          "horse_name": "CHIEF WALLABEE",
+          "score": 0.13901115644,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 16,
+          "horse_name": "FULLEFFORT",
+          "score": 0.12668411746,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 17,
+          "horse_name": "OCELLI",
+          "score": 0.11586241572,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 18,
+          "horse_name": "POTENTE",
+          "score": 0.11537293208000002,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 19,
+          "horse_name": "SIX SPEED",
+          "score": 0.10095552768,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 20,
+          "horse_name": "SILENT TACTIC",
+          "score": 0.09318314302,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 21,
+          "horse_name": "ROBUSTA",
+          "score": 0.07260785084,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 22,
+          "horse_name": "PAVLOVIAN",
+          "score": 0.06426908842000001,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 23,
+          "horse_name": "INTREPIDO",
+          "score": 0.04836629426,
+          "preset": "ensemble_top3"
+        },
+        {
+          "rank": 24,
+          "horse_name": "LITMUS TEST",
+          "score": 0.04357223552,
+          "preset": "ensemble_top3"
+        }
+      ]
+    },
+    "ensemble_top5": {
+      "preset": "ensemble_top5",
+      "ranking": [
+        {
+          "rank": 1,
+          "horse_name": "COMMANDMENT",
+          "score": 0.7041400087799999,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 2,
+          "horse_name": "RENEGADE",
+          "score": 0.5216749754200001,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 3,
+          "horse_name": "GOLDEN TEMPO",
+          "score": 0.48559926194,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 4,
+          "horse_name": "SO HAPPY",
+          "score": 0.48008915262,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 5,
+          "horse_name": "CHIEF WALLABEE",
+          "score": 0.40664777642,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 6,
+          "horse_name": "THE PUMA",
+          "score": 0.34939394354,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 7,
+          "horse_name": "POTENTE",
+          "score": 0.33892140824,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 8,
+          "horse_name": "FURTHER ADO",
+          "score": 0.33110406692,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 9,
+          "horse_name": "DANON BOURBON",
+          "score": 0.33072062196,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 10,
+          "horse_name": "RIGHT TO PARTY",
+          "score": 0.27304909976,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 11,
+          "horse_name": "LITMUS TEST",
+          "score": 0.26215137596,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 12,
+          "horse_name": "SIX SPEED",
+          "score": 0.23905171698,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 13,
+          "horse_name": "EMERGING MARKET",
+          "score": 0.23336193709999997,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 14,
+          "horse_name": "WONDER DEAN",
+          "score": 0.22303186299999997,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 15,
+          "horse_name": "INCREDIBOLT",
+          "score": 0.22182697122,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 16,
+          "horse_name": "FULLEFFORT",
+          "score": 0.20570884542,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 17,
+          "horse_name": "PAVLOVIAN",
+          "score": 0.1482076837,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 18,
+          "horse_name": "SILENT TACTIC",
+          "score": 0.1353746809,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 19,
+          "horse_name": "ALBUS",
+          "score": 0.12543748928,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 20,
+          "horse_name": "INTREPIDO",
+          "score": 0.12026238486,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 21,
+          "horse_name": "CORONA DE ORO",
+          "score": 0.11866866495999999,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 22,
+          "horse_name": "ROBUSTA",
+          "score": 0.11721205807999999,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 23,
+          "horse_name": "GREAT WHITE",
+          "score": 0.0787667784,
+          "preset": "ensemble_top5"
+        },
+        {
+          "rank": 24,
+          "horse_name": "OCELLI",
+          "score": 0.06362653416,
+          "preset": "ensemble_top5"
+        }
+      ]
+    },
+    "fp_strength": {
+      "preset": "fp_strength",
+      "ranking": [
+        {
+          "rank": 1,
+          "horse_name": "GREAT WHITE",
+          "score": 1.0,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 2,
+          "horse_name": "PAVLOVIAN",
+          "score": 0.9565217391304348,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 3,
+          "horse_name": "SIX SPEED",
+          "score": 0.9130434782608695,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 4,
+          "horse_name": "WONDER DEAN",
+          "score": 0.8695652173913043,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 5,
+          "horse_name": "ROBUSTA",
+          "score": 0.8260869565217391,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 6,
+          "horse_name": "CORONA DE ORO",
+          "score": 0.782608695652174,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 7,
+          "horse_name": "POTENTE",
+          "score": 0.7391304347826086,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 8,
+          "horse_name": "ALBUS",
+          "score": 0.6956521739130435,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 9,
+          "horse_name": "CHIEF WALLABEE",
+          "score": 0.6521739130434783,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 10,
+          "horse_name": "RIGHT TO PARTY",
+          "score": 0.6086956521739131,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 11,
+          "horse_name": "INTREPIDO",
+          "score": 0.5652173913043478,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 12,
+          "horse_name": "SILENT TACTIC",
+          "score": 0.5217391304347826,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 13,
+          "horse_name": "EMERGING MARKET",
+          "score": 0.4782608695652174,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 14,
+          "horse_name": "FURTHER ADO",
+          "score": 0.43478260869565216,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 15,
+          "horse_name": "LITMUS TEST",
+          "score": 0.391304347826087,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 16,
+          "horse_name": "THE PUMA",
+          "score": 0.34782608695652173,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 17,
+          "horse_name": "DANON BOURBON",
+          "score": 0.30434782608695654,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 18,
+          "horse_name": "OCELLI",
+          "score": 0.2608695652173913,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 19,
+          "horse_name": "INCREDIBOLT",
+          "score": 0.21739130434782608,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 20,
+          "horse_name": "SO HAPPY",
+          "score": 0.17391304347826086,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 21,
+          "horse_name": "GOLDEN TEMPO",
+          "score": 0.13043478260869565,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 22,
+          "horse_name": "FULLEFFORT",
+          "score": 0.08695652173913043,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 23,
+          "horse_name": "COMMANDMENT",
+          "score": 0.043478260869565216,
+          "preset": "fp_strength"
+        },
+        {
+          "rank": 24,
+          "horse_name": "RENEGADE",
+          "score": 0.0,
+          "preset": "fp_strength"
+        }
+      ]
+    }
+  },
+  "exacta": {
+    "bet_type": "exacta",
+    "preset": "composite",
+    "top_n": 8,
+    "cost_per_ticket": 1.0,
+    "ticket_count": 56,
+    "total_cost": 56.0,
+    "tickets": [
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "naive_probability": 0.002464958912865742,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.0024620064107190188,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "naive_probability": 0.0023612169230373347,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.0023534110847661075,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.0023204041578311135,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.0023108145236909808,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "naive_probability": 0.0023034865570300067,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "naive_probability": 0.002298624835836146,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.002264616331121765,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.0022636716399461413,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "naive_probability": 0.0022570199016866037,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "naive_probability": 0.002256029092533661,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.002252702596472008,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.0022518503865055946,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.002243769306762678,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.0022394233324989424,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.0022192601875662427,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.0022092477928115878,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "COMMANDMENT",
+        "naive_probability": 0.002205553871689642,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "naive_probability": 0.0022008705071599743,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "naive_probability": 0.0022002607914620898,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.002196793968038338,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "naive_probability": 0.002191535464329696,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "SO HAPPY",
+        "naive_probability": 0.002187290662202608,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.0021650005803087757,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.002163824556477938,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "THE PUMA",
+        "naive_probability": 0.0021620293789394855,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "SO HAPPY",
+        "naive_probability": 0.002154209665730471,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.0021118012617519634,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "THE PUMA",
+        "naive_probability": 0.002107659072441008,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "RENEGADE",
+        "naive_probability": 0.0021037934853193256,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.002099896756084758,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "THE PUMA",
+        "naive_probability": 0.002099300965546604,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "THE PUMA",
+        "naive_probability": 0.0020952348131393125,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.0020735778200391924,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.0020712289613321797,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.00206950572591552,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "RENEGADE",
+        "naive_probability": 0.002065714983749013,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "THE PUMA",
+        "naive_probability": 0.002063546086689046,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.0020630153212383147,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.0020618887850162807,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.0020590194507783834,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.0020320478301743493,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "EMERGING MARKET",
+        "naive_probability": 0.00202787845229825,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "RENEGADE",
+        "naive_probability": 0.00201376677347075,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.0020134157112516003,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.0020100367952611284,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.0020095159106629534,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.0020020658180683985,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "RENEGADE",
+        "naive_probability": 0.0020018959918562626,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.001980946275115768,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "CHIEF WALLABEE",
+        "naive_probability": 0.0019791236130593044,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.0019730906589319266,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "RENEGADE",
+        "naive_probability": 0.001971618939341672,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "WONDER DEAN",
+        "naive_probability": 0.001969268964251511,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "GOLDEN TEMPO",
+        "naive_probability": 0.001967967029012083,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      }
+    ]
+  },
+  "trifecta": {
+    "bet_type": "trifecta",
+    "preset": "composite",
+    "top_n": 10,
+    "cost_per_ticket": 0.5,
+    "ticket_count": 120,
+    "total_cost": 60.0,
+    "tickets": [
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "naive_probability": 0.00012509901339787072,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "naive_probability": 0.0001249491711008319,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "naive_probability": 0.0001248206901613053,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00012451429913755107,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00012440805119078293,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00012425150020555458,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00012293672300789265,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.000122789470679792,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00012255594218511136,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00012225524485741417,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00012204944996767241,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00012189600110699704,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011998104281906297,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011983733077394919,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011952608458769382,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011946661064654709,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011938291748681736,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011930469366156136,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011917367204473157,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011916179174043343,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "SO HAPPY",
+        "naive_probability": 0.0001189917349241674,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011883811853546011,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011876071490247688,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011869998813235801,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011868888534268056,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011846954782958449,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011834510621555905,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011819651940506839,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011810532241867518,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011795704990687282,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "WONDER DEAN",
+        "naive_probability": 0.00011757804089451749,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011750072056856931,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "WONDER DEAN",
+        "naive_probability": 0.00011743720714011426,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "THE PUMA",
+        "naive_probability": 0.0001173979668366309,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.0001171122803483751,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "WONDER DEAN",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011696038016879639,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011691279120592912,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "WONDER DEAN",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011667372906211374,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011660388322416844,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011650714494128239,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "POTENTE",
+        "naive_probability": 0.0001164101518285863,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "POTENTE",
+        "naive_probability": 0.00011627071695955853,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011623802416717818,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.0001160921974656363,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "POTENTE",
+        "third": "SO HAPPY",
+        "naive_probability": 0.0001157440751909702,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "DANON BOURBON",
+        "naive_probability": 0.00011551641713350452,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "POTENTE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011546047328976057,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "DANON BOURBON",
+        "naive_probability": 0.00011537805277059839,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "POTENTE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.0001149778155704951,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "POTENTE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011483363773363741,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "DANON BOURBON",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011481406365468308,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011467573431986771,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "DANON BOURBON",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011453279227055298,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011448365304748686,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "THE PUMA",
+        "naive_probability": 0.0001144386550721803,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011438366359623792,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011429663309159781,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011424202472077798,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011424089338132206,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011404755027574446,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011402929189470821,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "DANON BOURBON",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011401496178803367,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011398376530254964,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011388940235260652,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "DANON BOURBON",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011387204279132074,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011386322967368269,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011383661412093023,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011379491608921743,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011376246815153876,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011366505920188977,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011365232771067735,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011344211104773224,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011336435106334323,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011321331654072386,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011313465897552904,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "GOLDEN TEMPO",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011299355020345568,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011297155656445064,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011274269525893259,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011259505653412684,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011246062505113138,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "WONDER DEAN",
+        "naive_probability": 0.00011237898806900476,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "RENEGADE",
+        "naive_probability": 0.0001121681053543565,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011212973009756371,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "WONDER DEAN",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011203790356828729,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011201359788369603,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "WONDER DEAN",
+        "naive_probability": 0.0001120074795483804,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011196034316744486,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011186899015607553,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011179612577246732,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011173120400721443,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011170454339731125,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011151066880367968,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011150050231866412,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011149763983813215,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "CHIEF WALLABEE",
+        "naive_probability": 0.00011149538497849918,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011140488999157,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011138435437129471,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011134594914804281,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011130752848506944,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "WONDER DEAN",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011128091055818729,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "POTENTE",
+        "naive_probability": 0.00011126274059279494,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "naive_probability": 0.00011117916804692996,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011110136029256293,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "RENEGADE",
+        "naive_probability": 0.00011107260366268634,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011106750609157801,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011105731723202773,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011104692931156731,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "CHIEF WALLABEE",
+        "third": "SO HAPPY",
+        "naive_probability": 0.0001110189927036127,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011096045042540513,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011092235306479984,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "POTENTE",
+        "naive_probability": 0.00011089492222328924,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "POTENTE",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011087278885492323,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "GOLDEN TEMPO",
+        "naive_probability": 0.00011086687060719765,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "GOLDEN TEMPO",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011085191372566094,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "third": "THE PUMA",
+        "naive_probability": 0.0001108417141623827,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011080123467248603,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "naive_probability": 0.00011069765167539864,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "naive_probability": 0.00011058626506898402,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "RENEGADE",
+        "third": "SO HAPPY",
+        "naive_probability": 0.00011057776638871843,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "DANON BOURBON",
+        "naive_probability": 0.00011040852495974526,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      }
+    ]
+  },
+  "superfecta": {
+    "bet_type": "superfecta",
+    "preset": "composite",
+    "top_n": 10,
+    "cost_per_ticket": 0.1,
+    "ticket_count": 200,
+    "total_cost": 20.0,
+    "tickets": [
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.572728034764912e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.566659711959493e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.564855289490668e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.558794235259185e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.558104874357707e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.546320320873851e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.542007026607103e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.536709508841582e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.53642473751152e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.530993192436196e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.530258586194652e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.528199516372422e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.519266061110771e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.515100101948811e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.512029653309322e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.511069596892521e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.506342079107954e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.504002275756534e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.498285413090546e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.487223367818948e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.486817345043247e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.481435675462411e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.478227638405454e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.472853095117908e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.41470460967595e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.4070211432166075e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "CHIEF WALLABEE",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.4007043626444455e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.400433023513252e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.393037665535374e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.390380578183951e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.384722204866037e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.382726246796525e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.379274126776607e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.378544063339318e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.376163108700413e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "RENEGADE",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.375196542383487e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.373260625087733e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "CHIEF WALLABEE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.371529876437328e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.371246658778919e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.370903909606256e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.367560398276206e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.364352928013275e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "GOLDEN TEMPO",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.362787553512536e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.360511864183386e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.358357451436672e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.357633044741935e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.355166272763053e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.355084444757306e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.350466529283358e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.348730673348385e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "CHIEF WALLABEE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.347484238861749e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.347087416257033e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.346695783414526e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "RENEGADE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.34614119968325e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.34331330680254e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.3397320600511e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.335331090713734e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.3343780046189195e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "CHIEF WALLABEE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.334087286942238e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "GOLDEN TEMPO",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.333790163158408e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.333775943227558e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.331857600824771e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.331770822795345e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.331134802354948e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.325161783786392e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.32490728928616e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "RENEGADE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.322192994999414e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.318969360786468e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.318247348580243e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.3153754794521185e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.312851577984325e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.312206365296749e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "GOLDEN TEMPO",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.309889352766744e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "RENEGADE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.308849422586689e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.308610381873762e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.307981163573631e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "CHIEF WALLABEE",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.307023294539881e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.304281148606589e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.3029881960086215e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.2988223885046496e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.298008742667172e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.297448816835508e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "GOLDEN TEMPO",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.296571748327664e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.295143013496036e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.294652393476532e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.290914682079449e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.290465053303527e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "CHIEF WALLABEE",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.2900705442272e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.289058770345151e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.286229750979414e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.284097517619866e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.282536363155078e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.281225716516213e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "RENEGADE",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.280742997174826e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.2787001703694945e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.278501463700882e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "GOLDEN TEMPO",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.276259589858998e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.275628877594393e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.274127212290475e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.27224399871355e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "GOLDEN TEMPO",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.267961520947528e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.267910296087249e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.267330862239012e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.266612127975513e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "WONDER DEAN",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.2660887667567834e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "RENEGADE",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.265003617248462e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.263101161570436e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.263096836406464e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.262506026513384e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.262325779049517e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "WONDER DEAN",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.2585833108082705e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.257499461080743e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.25684783917046e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.25500486193387e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.254693903319184e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.2540461325312944e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "GOLDEN TEMPO",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.252809113181635e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.252554030456556e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.251508876169767e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "CHIEF WALLABEE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.250174995120457e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.247743698197445e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.245319563464047e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "CHIEF WALLABEE",
+        "naive_probability": 6.244692894723958e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.243642183746242e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.243108712683118e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "CHIEF WALLABEE",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.242712675552985e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.2393476891025674e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "WONDER DEAN",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.237542791450558e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.236995483405406e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "WONDER DEAN",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.23317176196862e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.230152125436543e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.228844860604395e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.227790923329491e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "CHIEF WALLABEE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.226601761521965e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "RENEGADE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.225270989214903e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "CHIEF WALLABEE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.224344627892089e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.224298957899483e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "POTENTE",
+        "naive_probability": 6.223789358740811e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.222328495235735e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.2217034681744926e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "RENEGADE",
+        "naive_probability": 6.2210135336509636e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "CHIEF WALLABEE",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.219176922530795e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "WONDER DEAN",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.218611056921863e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "WONDER DEAN",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.217895259095315e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.217307548584333e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "WONDER DEAN",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.216922386029573e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "RENEGADE",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.216695905667927e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "POTENTE",
+        "naive_probability": 6.216334568583246e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "WONDER DEAN",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.214011203483668e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "EMERGING MARKET",
+        "third": "GOLDEN TEMPO",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.213155731265131e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "POTENTE",
+        "naive_probability": 6.209942525332805e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.209870899535954e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "GOLDEN TEMPO",
+        "naive_probability": 6.20949072712343e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.209038769293622e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "CHIEF WALLABEE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.208305059635907e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "GOLDEN TEMPO",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.204042609422942e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.203102202182128e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "RENEGADE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.201793268211911e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "WONDER DEAN",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.2008959587366715e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "POTENTE",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.200763375601077e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "RENEGADE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.199543543843683e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.1953139699447e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "WONDER DEAN",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.195174551565591e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "POTENTE",
+        "naive_probability": 6.194699294059747e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.19467522985341e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.1938779263849535e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "POTENTE",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.193336165726613e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "RENEGADE",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.193261250110476e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "CHIEF WALLABEE",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.189980406774547e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.189949562501418e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "EMERGING MARKET",
+        "third": "GOLDEN TEMPO",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.189724470482202e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "COMMANDMENT",
+        "third": "SO HAPPY",
+        "fourth": "POTENTE",
+        "naive_probability": 6.189413362360345e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "COMMANDMENT",
+        "third": "GOLDEN TEMPO",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.187478355141915e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.1869036846781975e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "RENEGADE",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.183569465416516e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.182968666373883e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.182912937062127e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.182178537870466e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "CHIEF WALLABEE",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.1818015729171e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "SO HAPPY",
+        "third": "COMMANDMENT",
+        "fourth": "POTENTE",
+        "naive_probability": 6.181624808881784e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "GOLDEN TEMPO",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.180657114055492e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.180204452803324e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "WONDER DEAN",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.176594516512829e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "DANON BOURBON",
+        "naive_probability": 6.176006442926235e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "CHIEF WALLABEE",
+        "second": "EMERGING MARKET",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.174799097143466e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "POTENTE",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.172522168847886e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.171871089802657e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "SO HAPPY",
+        "third": "GOLDEN TEMPO",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.17153613152449e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "GOLDEN TEMPO",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.1698050006417885e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "THE PUMA",
+        "fourth": "DANON BOURBON",
+        "naive_probability": 6.1686088866482216e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "THE PUMA",
+        "second": "WONDER DEAN",
+        "third": "SO HAPPY",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.168434203284321e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "SO HAPPY",
+        "third": "EMERGING MARKET",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.16699239020218e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "POTENTE",
+        "third": "SO HAPPY",
+        "fourth": "THE PUMA",
+        "naive_probability": 6.165283792806999e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "SO HAPPY",
+        "second": "COMMANDMENT",
+        "third": "EMERGING MARKET",
+        "fourth": "WONDER DEAN",
+        "naive_probability": 6.164478486807601e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "SO HAPPY",
+        "third": "THE PUMA",
+        "fourth": "COMMANDMENT",
+        "naive_probability": 6.164296222944499e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "EMERGING MARKET",
+        "second": "RENEGADE",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.164188307647971e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "THE PUMA",
+        "third": "SO HAPPY",
+        "fourth": "DANON BOURBON",
+        "naive_probability": 6.162265918076712e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "WONDER DEAN",
+        "second": "THE PUMA",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.158807527810321e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "COMMANDMENT",
+        "second": "SO HAPPY",
+        "third": "WONDER DEAN",
+        "fourth": "EMERGING MARKET",
+        "naive_probability": 6.157781729354215e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      },
+      {
+        "first": "RENEGADE",
+        "second": "EMERGING MARKET",
+        "third": "COMMANDMENT",
+        "fourth": "SO HAPPY",
+        "naive_probability": 6.156132390827907e-06,
+        "note": "illustrative chained softmax \u2014 not calibrated track probability"
+      }
+    ]
+  }
+}
