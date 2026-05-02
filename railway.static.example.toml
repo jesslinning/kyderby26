@@ -1,0 +1,13 @@
+# NOT loaded by Railway (filename is not `railway.toml`).
+# For a separate static-only service: set Root Directory to `app/web`, then either
+# paste the [build]/[deploy] blocks below into that service's dashboard or add
+# `railway.toml` under app/web with this content.
+
+# Static-only: NO /api, NO live odds. (serve dist only)
+
+[build]
+builder = "nixpacks"
+buildCommand = "NPM_CONFIG_CACHE=/tmp/npm-cache npm install --no-audit --no-fund && npm run build"
+
+[deploy]
+startCommand = "npm run start"

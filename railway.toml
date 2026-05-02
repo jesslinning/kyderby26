@@ -1,6 +1,9 @@
 # LIVE ODDS: deploy from repo root. Prefer Dockerfile (Python runtime + Vite dist).
 #
-# Root Directory: blank (not app/web). See app/web/railway.toml for static-only caveats.
+# Railway UI → Service → Settings → Root Directory MUST be empty (repo root).
+# Only one `railway.toml` should exist in-repo for this service (this file).
+#
+# Optional static-only frontend (separate service): see railway.static.example.toml.
 
 [build]
 builder = "DOCKERFILE"
