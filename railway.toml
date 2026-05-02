@@ -1,17 +1,10 @@
-# LIVE ODDS: deploy from this file (repo root). FastAPI + static dist.
+# LIVE ODDS: deploy from repo root. Prefer Dockerfile (Python runtime + Vite dist).
 #
-# In Railway → your service → Settings:
-#   • Root Directory: leave BLANK (or ".")  —  NOT "app/web"
-#   • If Root Directory is "app/web", only `serve` runs and /api/* returns 404
-#     (that is the static-only app/web/railway.toml).
-#
-# After changing root, trigger a new deploy. Set PORT is automatic.
+# Root Directory: blank (not app/web). See app/web/railway.toml for static-only caveats.
 
 [build]
-builder = "nixpacks"
-# Requires root package.json + requirements.txt so Nixpacks installs Node (npm) and Python (pip).
-buildCommand = "pip install -r requirements.txt && npm run build"
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
 
-# Prefer nixpacks.toml [start].cmd (python3 uvicorn). Fallback if using Railway UI start override:
 [deploy]
-startCommand = "sh -c 'PYTHONPATH=. exec python3 -m uvicorn app.odds_api:app --host 0.0.0.0 --port ${PORT:-8000}'"
+healthcheckPath = "/api/health"

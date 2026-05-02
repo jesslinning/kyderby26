@@ -1,10 +1,9 @@
-# Node (npm build) + Python (FastAPI runtime). Without [start], Nixpacks runs `npm start`
-# in an environment where `python` may be missing from PATH (only python3, or Node-only shell).
+# Fallback only — production deploy should use the repo-root Dockerfile so Python is in the runtime image.
+# Nixpacks + Node often produces a run image with no python3 on PATH.
 
 [variables]
 NIXPACKS_NODE_VERSION = "20"
 NIXPACKS_PYTHON_VERSION = "3.12"
 
-# Prefer uvicorn directly so the container process is Python, not `npm start`.
 [start]
 cmd = "sh -c 'PYTHONPATH=. exec python3 -m uvicorn app.odds_api:app --host 0.0.0.0 --port ${PORT:-8000}'"
